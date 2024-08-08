@@ -3,19 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	var score int
-	fmt.Print("Enter your score :")
-	fmt.Scanln(&score)
-	switch score {
-	case 1:
-		fmt.Println("1")
-	case 2:
-		fmt.Println("2")
-	case 3:
-		fmt.Println("3")
-	case 4:
-		fmt.Println("4")
-	default:
-		fmt.Println("Error")
-	}
+	var array1 = [3]int{1, 2, 3}
+	array2 := [2]int{1, 2}
+	array3 := []string{"a", "b", "c"}
+	fmt.Println(array1[0])
+	fmt.Println(array2)
+	fmt.Println(array3)
 }
