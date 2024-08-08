@@ -2,29 +2,16 @@ package main
 
 import "fmt"
 
-// call a function
-func myMessage() {
-	fmt.Println("I just got executed!")
+// Variadic function
+func variadic_func(number ...int) int {
+	sum := 0
+	for _, value := range number {
+		sum += value
+	}
+	return sum
 }
 
-// parameters
-func myName(name string) {
-	fmt.Println("Hello", name)
-}
-
-// function return and input parameters
-func plus(a int, b int) int {
-	return a + b
-}
-
-// function return
-func printHello() string {
-	return "Hello  world"
-}
 func main() {
-	myMessage()
-	myName("Fah")
-	sum := plus(5, 6)
-	fmt.Println(sum)
-	fmt.Println(printHello())
+	result := variadic_func(10, 20, 30)
+	fmt.Println("Sum :", result)
 }
