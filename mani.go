@@ -3,12 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	var number int
-	fmt.Print("Enter your number :")
-	fmt.Scanln(&number)
-	if number >= 1 {
-		fmt.Println("มากกว่า 1 ")
-	} else {
-		fmt.Println("น้อยกว่า 1")
+	var score int
+	fmt.Print("Enter your score :")
+	fmt.Scanln(&score)
+	switch score {
+	case 1:
+		fmt.Println("1")
+	case 2:
+		fmt.Println("2")
+	case 3:
+		fmt.Println("3")
+	case 4:
+		fmt.Println("4")
+	default:
+		fmt.Println("Error")
 	}
 }
