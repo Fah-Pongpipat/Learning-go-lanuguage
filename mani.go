@@ -3,8 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	var name string
-	fmt.Print("Enter your name: ")
-	fmt.Scanf("%s", &name)
-	fmt.Println("Your name is", name)
+	var number int
+	fmt.Print("Enter your number :")
+	fmt.Scanln(&number)
+	if number >= 1 {
+		fmt.Println("มากกว่า 1 ")
+	} else {
+		fmt.Println("น้อยกว่า 1")
+	}
 }
