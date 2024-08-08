@@ -2,16 +2,19 @@ package main
 
 import "fmt"
 
-// Variadic function
-func variadic_func(number ...int) int {
-	sum := 0
-	for _, value := range number {
-		sum += value
-	}
-	return sum
+type Person struct {
+	name   string
+	age    int
+	gender string
 }
 
 func main() {
-	result := variadic_func(10, 20, 30)
-	fmt.Println("Sum :", result)
+	var person1 Person
+	person1.name = "Fah"
+	person1.age = 21
+	person1.gender = "M"
+	fmt.Println(person1)
+
+	person2 := Person{name: "Ed", age: 12, gender: "M"}
+	fmt.Println(person2)
 }
